@@ -32,8 +32,11 @@ print(chr(97), ord('a'))
 print(chr(122), ord('z'))
 
 sayi = 100
+
 print("Sayinin degeri ", sayi)
 print("Sayinin degeri " + str(sayi))
+
+
 
 
 
