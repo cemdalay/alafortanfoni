@@ -17,7 +17,6 @@
 
 # Yeni bir işlem yapmak istiyor musunuz (Y/N) :
 ###############################################
-
 print("""
 ###############################################
 #                                             # 
@@ -87,18 +86,18 @@ try:
             Telefon Numarası    : {tel_no}
              """)
             islem_sonucu = str(input("Kayıt ekleme işlemine devam etmek ister misiniz ?\nDevam etmek için E'ye,Ana Menüye dönmek için O'a basınız."))
-            if islem_sonucu == "0" :
-                print("""
-            Ana Menü için 0'a basınız
-            Kayıt Eklemek için 1'e basınız
-            Kayıt Düzenlemek için 2'ye basınız
-            Kayıt Silmek için 3'e basınız
-            Kayıt Listesi için 4'e basınız
-            Arama yapmak için 5'e basınız
-            """)
-            else:
-                islem_numarası = int(input("Lütfen yapmak istediğiniz işlemin numarasını giriniz : "))
-                break
+            # if islem_sonucu == "0" :
+            #     print("""
+            # Ana Menü için 0'a basınız
+            # Kayıt Eklemek için 1'e basınız
+            # Kayıt Düzenlemek için 2'ye basınız
+            # Kayıt Silmek için 3'e basınız
+            # Kayıt Listesi için 4'e basınız
+            # Arama yapmak için 5'e basınız
+            # """)
+            # else:
+            #     islem_numarası = int(input("Lütfen yapmak istediğiniz işlemin numarasını giriniz : "))
+            #     break
                 
 
 
@@ -118,26 +117,10 @@ try:
             Soyadı              : {soyadı}
             Mail Adresi         : {isim}{soyadı}@cdcable.com
             Telefon Numarası    : {tel_no}
-
             """)
         continue  
             
-            
-               
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+          
     i += 1
 
 except Exception as mahmud:
