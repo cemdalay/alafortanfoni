@@ -1,0 +1,1 @@
+# projeyi açtıktan sonra, terminalı açarak python get-pip.py komutunu çalıştırmanız yeterlidir.

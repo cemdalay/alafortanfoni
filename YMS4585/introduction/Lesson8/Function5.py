@@ -5,6 +5,7 @@
 import os
 os.system('clear')
 
+
 def FarkHesapla():
     go_on = "y"
     tek_sayilar = []
@@ -17,5 +18,6 @@ def FarkHesapla():
         #os.system('clear')
     return max(tek_sayilar) - min(tek_sayilar)
 
+
 sonuc = FarkHesapla()
-print("İşlem sonucu :",sonuc)
+print("İşlem sonucu :", sonuc)
