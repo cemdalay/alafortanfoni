@@ -45,7 +45,7 @@ for i in range(10):
     people.append(person)
 
 
-def Liste(param):
+def Liste(param=""):
     index = 0
     if param == "":
 
@@ -69,8 +69,65 @@ def Liste(param):
         index += 1
 
 
-go_on = "y"
-while go_on == "y":
-    key = input("Lütfen arama kelimesi giriniz : ")
-    print(key)
-    Liste(key)
+def Main():
+    ekle = "a"
+    sil = "d"
+    guncelle = "u"
+    liste = "l"
+    bul = "f"
+    islem = ""
+    result = True
+
+    while result:
+        print("Lütfen yapmak istediğiniz işlemi seçiniz")
+        print("-"*40)
+        print("Kişi ekleme için : a")
+        print("Kişi silme işlemi için : d")
+        print("Kişi güncelleme işlemi için : u")
+        print("Kişi bulmak için : f")
+        print("Kişileri listelemek için : l")
+        print("İşleme devam etmek istemiyorsanız herhangi bir tuşa basınız")
+        islem = input("Lütfen bir anahtar kelime giriniz : ").lower()
+
+        if islem == "a":
+            person = Person()
+            person.FirstName = input("Lütfen kişinin adını giriniz : ")
+            person.LastName = input("Lütfen kişinin soyadını giriniz : ")
+            person.Phone = input(
+                "Lütfen kişinin telefon numarasını giriniz : ")
+            person.Mail = input("Lütfen kişinin mail adresini giriniz : ")
+            people.append(person)
+            print("Kişi Rehbere Eklendi !")
+        elif islem == "d":
+
+            Liste()
+            id = int(input(
+                "Lütfen sikmek istediğiniz kişinin ID değerini giriniz : "))
+            people.remove(people[id])
+            print("Kişi başarıyla rehberden silindi")
+
+        elif islem == "u":
+            Liste()
+            id = int(input(
+                "Lütfen güncellemek istediğiniz kaydın ID değerini giriniz : "))
+            updated_person = people[id]
+
+            for key, value in vars(updated_person).items():
+                vl = input(f"Lütfen {key} giriniz : ")
+                vars(updated_person).__setitem__(key, vl)
+
+            # updated_person.FirstName = input("Lütfen FirstName giriniz : ")
+            # updated_person.LastName = input("Lütfen LastName giriniz : ")
+            # updated_person.Mail = input("Lütfen Mail giriniz : ")
+            # updated_person.Phone = input("Lütfen Phone giriniz : ")
+
+        elif islem == "l":
+            Liste()
+        elif islem == "f":
+            Liste(input("Lütfen anahtar kelime giriniz : "))
+        else:
+            return False
+            print("Rehber uygulamasından çıkış yaptınız !")
+
+
+Main()
